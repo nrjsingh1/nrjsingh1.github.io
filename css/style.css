@@ -722,14 +722,26 @@ body.dark-mode .dark-mode-toggle i::before {
     writing-mode: horizontal-tb;
     transform: none;
     text-align: left;
-    font-size: 0.75rem;
-    margin-bottom: 8px;
+    font-size: 0.82rem;
+    margin-bottom: 2px;
     color: var(--primary-600);
+    width: auto;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: visible;
   }
-  
+
+  .timeline-item {
+    display: block;
+    padding-right: 0;
+    margin-bottom: 18px;
+  }
+
   .timeline-content {
     margin-right: 0;
-    padding: 14px 16px;
+    padding: 12px 8px 12px 8px;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .timeline-content h3 {
