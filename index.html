@@ -12,12 +12,18 @@
         </style>
     </head>
     <body>
+        <button id="darkModeToggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+            <i class="fas fa-moon"></i>
+        </button>
         <div class="layout">
             <!-- Left Sidebar Navigation -->
             <aside class="sidebar">
                                 <div class="brand">
-                                    <div class="avatar-block">
-                                        <img class="avatar" src="assets/profile.jpg" alt="Profile photo" onerror="this.src='https://avatars.githubusercontent.com/u/0?v=4'" />
+                                    <div class="avatar-block avatar-3d-wrapper" title="Replace assets/profile.jpg with your own photo (square, ≥400px recommended)">
+                                        <div class="avatar-stage" data-tilt>
+                                            <img class="avatar avatar-enhanced" src="assets/profile.jpg" alt="Profile photo" onerror="this.src='https://avatars.githubusercontent.com/u/0?v=4'" />
+                                            <div class="avatar-rim" aria-hidden="true"></div>
+                                        </div>
                                     </div>
                                     <div class="profile-info">
                                         <h1>Neeraj Kumar Singh</h1>
@@ -49,7 +55,7 @@
                         <section id="about" class="section">
                             <h2>About</h2>
                             <p>
-                                Experienced software engineer with a strong background in building scalable distributed systems, event-driven architectures, and cloud-native applications. Passionate about data-intensive backends, reliability, and clean, pragmatic engineering.
+                                Experienced software engineer with 9 years of strong background in building scalable distributed systems, event-driven architectures, and cloud-native applications. Passionate about data-intensive backends, reliability, and clean, pragmatic engineering.
                             </p>
                             <p>
                                 Currently pursuing a Masters in Computer Science from Montclair State University, New Jersey, USA.
@@ -67,62 +73,85 @@
 
                         <section id="experience" class="section">
                             <h2>Work Experience</h2>
+                            <div class="timeline">
+                                <article class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <div class="timeline-dot"></div>
+                                    </div>
+                                    <div class="timeline-date">Sept 2021 – May 2025</div>
+                                    <div class="timeline-content">
+                                        <h3>Senior Software Engineer</h3>
+                                        <h4 class="company">Here Technologies, Bengaluru</h4>
+                                        <div class="project-section">
+                                            <h5>Spark Based Road Attribute Automation</h5>
+                                            <ul>
+                                                <li>Migrated road attribute automation from an event-stream system to a Spark-based batch processing job.</li>
+                                                <li>Reduced processing time from 24+ hours to ~4 hours using Spark's MapReduce and AWS EMR clusters.</li>
+                                                <li>Integrated the batch job into a DAG execution plan coordinating upstream/downstream processes.</li>
+                                                <li>Delivered multiple attributes across phased releases; investigated and resolved UAT/production issues with Spark and CloudWatch logs.</li>
+                                                <li>Utilized AWS S3 for input/output data storage.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="project-section">
+                                            <h5>Event Stream-Based Processing</h5>
+                                            <ul>
+                                                <li>Developed an event-driven streaming application with Java, Spring Boot, PostgreSQL, and Apache Kafka.</li>
+                                                <li>Implemented a blocking queue mechanism and RDBMS for intermediate persistence.</li>
+                                                <li>Designed workflows to handle events sequentially and publish processed data to downstream consumers.</li>
+                                                <li>Deployed on Kubernetes for load balancing and scaling; built CI/CD with GitLab.</li>
+                                                <li>Leveraged Splunk for log analysis and troubleshooting.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="exp-item">
-                        <header>
-                            <h3>Senior Software Engineer • Here Technologies, Bengaluru</h3>
-                            <span class="duration">Sept 2021 – May 2025</span>
-                        </header>
-                        <h4>Spark Based Road Attribute Automation</h4>
-                        <ul>
-                            <li>Migrated road attribute automation from an event-stream system to a Spark-based batch processing job.</li>
-                            <li>Reduced processing time from 24+ hours to ~4 hours using Spark's MapReduce and AWS EMR clusters.</li>
-                            <li>Integrated the batch job into a DAG execution plan coordinating upstream/downstream processes.</li>
-                            <li>Delivered multiple attributes across phased releases; investigated and resolved UAT/production issues with Spark and CloudWatch logs.</li>
-                            <li>Utilized AWS S3 for input/output data storage.</li>
-                        </ul>
-                        <h4>Event Stream-Based Processing</h4>
-                        <ul>
-                            <li>Developed an event-driven streaming application with Java, Spring Boot, PostgreSQL, and Apache Kafka.</li>
-                            <li>Implemented a blocking queue mechanism and RDBMS for intermediate persistence.</li>
-                            <li>Designed workflows to handle events sequentially and publish processed data to downstream consumers.</li>
-                            <li>Deployed on Kubernetes for load balancing and scaling; built CI/CD with GitLab.</li>
-                            <li>Leveraged Splunk for log analysis and troubleshooting.</li>
-                        </ul>
-                    </article>
+                                <article class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <div class="timeline-dot"></div>
+                                    </div>
+                                    <div class="timeline-date">Feb 2020 – Sept 2021</div>
+                                    <div class="timeline-content">
+                                        <h3>Software Engineer II</h3>
+                                        <h4 class="company">Cisco India, Chennai</h4>
+                                        <div class="project-section">
+                                            <h5>Cisco Cloud Calling</h5>
+                                            <ul>
+                                                <li>Designed and implemented RESTful and SOAP APIs using Spring Boot and PostgreSQL.</li>
+                                                <li>Integrated REST clients with an Angular-based frontend for seamless communication.</li>
+                                                <li>Developed Spring-based authentication service; automated UI tests with Selenium.</li>
+                                                <li>Built CI/CD pipelines via Jenkins; upgraded Spring Boot 1.5.9 → 2.3.3.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
 
-                    <article class="exp-item">
-                        <header>
-                            <h3>Software Engineer II • Cisco India, Chennai</h3>
-                            <span class="duration">Feb 2020 – Sept 2021</span>
-                        </header>
-                        <h4>Cisco Cloud Calling</h4>
-                        <ul>
-                            <li>Designed and implemented RESTful and SOAP APIs using Spring Boot and PostgreSQL.</li>
-                            <li>Integrated REST clients with an Angular-based frontend for seamless communication.</li>
-                            <li>Developed Spring-based authentication service; automated UI tests with Selenium.</li>
-                            <li>Built CI/CD pipelines via Jenkins; upgraded Spring Boot 1.5.9 → 2.3.3.</li>
-                        </ul>
-                    </article>
-
-                    <article class="exp-item">
-                        <header>
-                            <h3>Verizon India, Chennai</h3>
-                            <span class="duration">July 2016 – Feb 2020</span>
-                        </header>
-                        <h4>Analyst System Developer (July 2019 – Feb 2020)</h4>
-                        <ul>
-                            <li>Worked on backend of a SaaS Conversation Manager tool using Java, PostgreSQL, REST services.</li>
-                        </ul>
-                        <h4>Software Engineer Developer (July 2016 – July 2019)</h4>
-                        <ul>
-                            <li>Java developer on Voice portal (IVR) using VXML (Voice XML) and Nuance grammars.</li>
-                            <li>Built AngularJS metrics dashboard for real-time call volumes.</li>
-                            <li>Created Java-based security vulnerability finder to mask CPNI-sensitive data in logs.</li>
-                            <li>Developed Verizon Store Locator web app using PHP, CSS, HTML, Google Maps API.</li>
-                        </ul>
-                    </article>
-                </section>
+                                <article class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <div class="timeline-dot"></div>
+                                    </div>
+                                    <div class="timeline-date">July 2016 – Feb 2020</div>
+                                    <div class="timeline-content">
+                                        <h3>Software Engineer</h3>
+                                        <h4 class="company">Verizon India, Chennai</h4>
+                                        <div class="project-section">
+                                            <h5>Analyst System Developer (July 2019 – Feb 2020)</h5>
+                                            <ul>
+                                                <li>Worked on backend of a SaaS Conversation Manager tool using Java, PostgreSQL, REST services.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="project-section">
+                                            <h5>Software Engineer Developer (July 2016 – July 2019)</h5>
+                                            <ul>
+                                                <li>Java developer on Voice portal (IVR) using VXML (Voice XML) and Nuance grammars.</li>
+                                                <li>Built AngularJS metrics dashboard for real-time call volumes.</li>
+                                                <li>Created Java-based security vulnerability finder to mask CPNI-sensitive data in logs.</li>
+                                                <li>Developed Verizon Store Locator web app using PHP, CSS, HTML, Google Maps API.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
 
                 <section id="education" class="section">
                     <h2>Education</h2>
@@ -167,10 +196,69 @@
             );
             sections.forEach(sec => observer.observe(sec));
 
+            // Timeline scroll highlighting
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            
+            const timelineObserver = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('in-view');
+                        } else {
+                            entry.target.classList.remove('in-view');
+                        }
+                    });
+                },
+                { 
+                    root: null, 
+                    rootMargin: '-20% 0px -40% 0px',
+                    threshold: 0.3 
+                }
+            );
+            
+            timelineItems.forEach(item => timelineObserver.observe(item));
+
             // Close mobile drawer on click (if implemented via CSS)
             navLinks.forEach(a => a.addEventListener('click', () => {
                 document.body.classList.remove('nav-open');
             }));
+
+            // Dark mode toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+            
+            // Check for saved preference or system preference
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark.matches)) {
+                document.body.classList.add('dark-mode');
+            }
+            
+            darkModeToggle.addEventListener('click', () => {
+                document.body.classList.toggle('dark-mode');
+                const isDark = document.body.classList.contains('dark-mode');
+                localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            });
         </script>
+                        <script>
+                        // Optional dynamic tilt for deeper 3D feeling; disabled on touch devices
+                        (function(){
+                            const stage = document.querySelector('.avatar-stage');
+                            if(!stage) return;
+                            const isTouch = matchMedia('(pointer: coarse)').matches;
+                            if(isTouch) return; // skip on touch for accessibility
+                            const damp = 20; // higher = gentler tilt
+                            stage.addEventListener('mousemove', (e) => {
+                                const rect = stage.getBoundingClientRect();
+                                const x = e.clientX - rect.left - rect.width/2;
+                                const y = e.clientY - rect.top - rect.height/2;
+                                const rotateX = (y / damp);
+                                const rotateY = -(x / damp);
+                                stage.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(10px)`;
+                            });
+                            stage.addEventListener('mouseleave', () => {
+                                stage.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+                            });
+                        })();
+                        </script>
     </body>
 </html>
