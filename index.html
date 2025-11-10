@@ -32,6 +32,11 @@
                                             <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:singhn23@montclair.edu">singhn23@montclair.edu</a></div>
                                             <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+18623489593">+1 862-348-9593</a></div>
                                         </div>
+                                        <div class="side-social">
+                                            <a href="https://github.com/nrjsingh1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                                            <a href="https://linkedin.com/in/nrjsingh1" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                                            <a href="assets/resume.pdf" class="resume-icon" download title="Download Resume" aria-label="Download Resume"><i class="fas fa-download"></i></a>
+                                        </div>
                                     </div>
                                 </div>
                 <nav class="side-nav" aria-label="Section navigation">
@@ -40,14 +45,7 @@
                     <a class="nav-link" href="#experience">Work Experience</a>
                     <a class="nav-link" href="#education">Education</a>
                 </nav>
-                <div class="side-social">
-                    <a href="https://github.com/nrjsingh1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/nrjsingh1" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                </div>
-                        <div class="resume-download">
-                            <!-- Replace assets/resume.pdf with your actual resume file (same filename) -->
-                            <a href="assets/resume.pdf" class="btn" download>Download Resume (PDF)</a>
-                        </div>
+                
             </aside>
 
             <!-- Main Content -->
@@ -150,21 +148,71 @@
                                         </div>
                                     </div>
                                 </article>
+                                
+                                <!-- CUSAT Internship -->
+                                <article class="timeline-item">
+                                    <div class="timeline-marker">
+                                        <div class="timeline-dot"></div>
+                                    </div>
+                                    <div class="timeline-date">July 2015 – April 2016</div>
+                                    <div class="timeline-content">
+                                        <h3>Internship</h3>
+                                        <h4 class="company">Computer Science Department, CUSAT (Kochi)</h4>
+                                        <div class="project-section">
+                                            <h5>Computer Aided Process Planning, HMT Kochi</h5>
+                                            <ul>
+                                                <li>Built a Python tool to read CAD drawings of machine tools using the dxfgrabber library.</li>
+                                                <li>Modeled shape-to-process mappings in an RDBMS and generated manufacturing process sequences.</li>
+                                                <li>Collaborated with Hindustan Machine Tools (HMT), Kochi, to validate CAD-driven workflows.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="project-section">
+                                            <h5>College Website, School of Engineering, Kochi</h5>
+                                            <ul>
+                                                <li>Developed the official college website <a href="https://soe.cusat.ac.in" target="_blank" rel="noopener">soe.cusat.ac.in</a> using PHP, HTML, CSS, jQuery, MySQL, and Apache Tomcat.</li>
+                                                <li>Implemented modules for publishing events, news, and updates by admins.</li>
+                                                <li>Created professor profile pages with publications and research; added login and authentication.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </article>
                             </div>
                         </section>
 
                 <section id="education" class="section">
                     <h2>Education</h2>
-                    <article class="edu-item">
-                        <h3>Cochin University of Science & Technology, Kochi</h3>
-                        <p>Bachelor of Technology, Computer Science Engineering</p>
-                        <span class="duration">2012 – 2016</span>
-                    </article>
-                    <article class="edu-item">
-                        <h3>St Michael's High School, Patna, Bihar</h3>
-                        <p>AISSCE (12th), CBSE</p>
-                        <span class="duration">2009 – 2011</span>
-                    </article>
+                    <div class="timeline">
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-date">2025 – 2027</div>
+                            <div class="timeline-content">
+                                <h3>Montclair State University, New Jersey, USA</h3>
+                                <p>Masters in Computer Science</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-date">2012 – 2016</div>
+                            <div class="timeline-content">
+                                <h3>Cochin University of Science & Technology, Kochi</h3>
+                                <p>Bachelor of Technology, Computer Science Engineering</p>
+                            </div>
+                        </article>
+                        <article class="timeline-item">
+                            <div class="timeline-marker">
+                                <div class="timeline-dot"></div>
+                            </div>
+                            <div class="timeline-date">2009 – 2011</div>
+                            <div class="timeline-content">
+                                <h3>St Michael's High School, Patna, Bihar</h3>
+                                <p>AISSCE (12th), CBSE</p>
+                            </div>
+                        </article>
+                    </div>
                 </section>
 
                 <!-- Duplicate Skills section removed -->
@@ -238,6 +286,41 @@
                 const isDark = document.body.classList.contains('dark-mode');
                 localStorage.setItem('theme', isDark ? 'dark' : 'light');
             });
+
+                        // Measure header height and set CSS variables for offsets
+                                                                        function applyHeaderOffset(){
+                                                                            const header = document.querySelector('.sidebar');
+                                                                            const content = document.querySelector('.content');
+                                                                            if(!header || !content) return;
+                                                                            const isMobile = window.matchMedia('(max-width: 980px)').matches;
+                                                                            if(!isMobile){
+                                                                                // Desktop/large screens: left sidebar shouldn't create a top offset
+                                                                                document.documentElement.style.setProperty('--header-offset', '0px');
+                                                                                document.documentElement.style.scrollPaddingTop = '';
+                                                                                content.style.removeProperty('padding-top');
+                                                                                return;
+                                                                            }
+                                                                            const rect = header.getBoundingClientRect();
+                                                                            const isFixedTop = getComputedStyle(header).position === 'fixed' && Math.round(rect.top) === 0;
+                                                                            const h = isFixedTop ? Math.ceil(rect.height) : 0;
+                                                                            // add an extra breathing gap (12px)
+                                                                            const total = h > 0 ? h + 12 : 0;
+                                                                            document.documentElement.style.setProperty('--header-offset', total + 'px');
+                                                                            document.documentElement.style.scrollPaddingTop = total + 'px';
+                                                                            // Rely on CSS in @media 980px to use var(--header-offset); do not override inline
+                                                                            content.style.removeProperty('padding-top');
+                                                                        }
+                                                let ro;
+                                                if('ResizeObserver' in window){
+                                                    ro = new ResizeObserver(() => applyHeaderOffset());
+                                                    const headerEl = document.querySelector('.sidebar');
+                                                    if(headerEl) ro.observe(headerEl);
+                                                }
+                                                window.addEventListener('resize', applyHeaderOffset, {passive:true});
+                                                window.addEventListener('orientationchange', applyHeaderOffset, {passive:true});
+                                                window.addEventListener('load', applyHeaderOffset);
+                                                document.addEventListener('DOMContentLoaded', applyHeaderOffset);
+                                                applyHeaderOffset();
         </script>
                         <script>
                         // Optional dynamic tilt for deeper 3D feeling; disabled on touch devices
