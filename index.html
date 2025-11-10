@@ -1,145 +1,176 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Neeraj Singh</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="home" class="hero">
-            <div class="container">
-                <h1>Neeraj Singh</h1>
-                <p class="tagline">Senior Software Engineer</p>
-                <p class="summary">Software engineer with 8+ years of experience, seeking to pursue a Master's in Computer Science to deepen expertise in intelligent systems and scalable software architecture.</p>
-                <div class="social-links">
-                    <a href="https://github.com/nrjsingh1" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com/in/nrjsingh1" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Neeraj Kumar Singh — Portfolio</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+        <style>
+            /* Page-specific small tweaks */
+            html { scroll-behavior: smooth; }
+        </style>
+    </head>
+    <body>
+        <div class="layout">
+            <!-- Left Sidebar Navigation -->
+            <aside class="sidebar">
+                                <div class="brand">
+                                    <div class="avatar-block">
+                                        <img class="avatar" src="assets/profile.jpg" alt="Profile photo" onerror="this.src='https://avatars.githubusercontent.com/u/0?v=4'" />
+                                    </div>
+                                    <div class="profile-info">
+                                        <h1>Neeraj Kumar Singh</h1>
+                                        <p>Experienced Software Engineer</p>
+                                        <div class="contact-list">
+                                            <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:singhn23@montclair.edu">singhn23@montclair.edu</a></div>
+                                            <div class="contact-item"><i class="fas fa-phone"></i> <a href="tel:+18623489593">+1 862-348-9593</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                <nav class="side-nav" aria-label="Section navigation">
+                    <a class="nav-link active" href="#about">About</a>
+                    <a class="nav-link" href="#skills">Skills</a>
+                    <a class="nav-link" href="#experience">Work Experience</a>
+                    <a class="nav-link" href="#education">Education</a>
+                </nav>
+                <div class="side-social">
+                    <a href="https://github.com/nrjsingh1" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/nrjsingh1" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                 </div>
-            </div>
-        </section>
+                        <div class="resume-download">
+                            <!-- Replace assets/resume.pdf with your actual resume file (same filename) -->
+                            <a href="assets/resume.pdf" class="btn" download>Download Resume (PDF)</a>
+                        </div>
+            </aside>
 
-        <section id="about" class="about">
-            <div class="container">
-                <h2>About Me</h2>
-                <p>Senior Software Engineer with expertise in building scalable distributed systems, event-driven architectures, and cloud-native applications. Experienced in developing and optimizing high-performance applications using modern technologies and best practices.</p>
-                <div class="skills">
-                    <h3>Technical Skills</h3>
-                    <ul>
-                        <li>Java</li>
-                        <li>Spring</li>
-                        <li>PostgreSQL</li>
-                        <li>Hibernate</li>
-                        <li>Kafka</li>
-                        <li>Spark</li>
-                        <li>REST</li>
-                        <li>Microservices</li>
-                        <li>Kubernetes</li>
-                        <li>AWS</li>
-                        <li>Git</li>
-                        <li>Jenkins</li>
-                        <li>Maven</li>
-                        <li>Jira</li>
-                        <li>Agile</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            <!-- Main Content -->
+            <main class="content">
+                        <section id="about" class="section">
+                            <h2>About</h2>
+                            <p>
+                                Experienced software engineer with a strong background in building scalable distributed systems, event-driven architectures, and cloud-native applications. Passionate about data-intensive backends, reliability, and clean, pragmatic engineering.
+                            </p>
+                            <p>
+                                Currently pursuing a Masters in Computer Science from Montclair State University, New Jersey, USA.
+                            </p>
+                        </section>
 
-        <section id="projects" class="projects">
-            <div class="container">
-                <h2>Experience</h2>
-                <div class="experience-timeline">
-                    <div class="experience-item">
-                        <h3>Senior Software Engineer</h3>
-                        <h4>Here Technologies, Bengaluru</h4>
-                        <p class="duration">Sept 2021 - May 2025</p>
-                        <h5>Spark Based Road Attribute Automation</h5>
-                        <ul>
-                            <li>Migrated road attribute automation from event-stream to Spark-based batch processing</li>
-                            <li>Reduced processing time from 24+ hours to ~4 hours using Spark's MapReduce</li>
-                            <li>Integrated batch jobs with DAG execution for coordination</li>
-                            <li>Implemented AWS S3 for efficient data storage</li>
-                        </ul>
-                        <h5>Event Stream-Based Processing</h5>
-                        <ul>
-                            <li>Developed event-driven streaming using Java, Spring Boot, PostgreSQL, and Apache Kafka</li>
-                            <li>Implemented Kubernetes for load balancing and scaling</li>
-                            <li>Set up CI/CD pipelines using GitLab</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="experience-item">
-                        <h3>Software Engineer II</h3>
-                        <h4>Cisco India, Chennai</h4>
-                        <p class="duration">Feb 2020 - Sept 2021</p>
-                        <h5>Cisco Cloud Calling</h5>
-                        <ul>
-                            <li>Designed RESTful and SOAP APIs using Spring Boot and PostgreSQL</li>
-                            <li>Integrated Angular-based frontend with REST backend</li>
-                            <li>Implemented authentication service and automated UI testing</li>
-                            <li>Upgraded Spring Boot from 1.5.9 to 2.3.3</li>
-                        </ul>
-                    </div>
+                        <section id="skills" class="section">
+                            <h2>Skills</h2>
+                            <ul class="chip-list">
+                                <li>Java</li><li>Spring</li><li>PostgreSQL</li><li>Hibernate</li><li>Kafka</li><li>Spark</li>
+                                <li>Web Development</li><li>REST</li><li>Microservices</li><li>Kubernetes</li><li>AWS</li>
+                                <li>Git</li><li>Jenkins</li><li>Maven</li><li>Jira</li><li>Agile</li>
+                            </ul>
+                        </section>
 
-                    <div class="experience-item">
-                        <h3>Previous Roles</h3>
-                        <ul>
-                            <li>Analyst System Developer at Verizon India (July 2019 - Feb 2020)</li>
-                            <li>Software Engineer Developer at Verizon India (July 2016 - July 2019)</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <section id="experience" class="section">
+                            <h2>Work Experience</h2>
 
-        <section id="education" class="education">
-            <div class="container">
-                <h2>Education</h2>
-                <div class="education-timeline">
-                    <div class="education-item">
+                    <article class="exp-item">
+                        <header>
+                            <h3>Senior Software Engineer • Here Technologies, Bengaluru</h3>
+                            <span class="duration">Sept 2021 – May 2025</span>
+                        </header>
+                        <h4>Spark Based Road Attribute Automation</h4>
+                        <ul>
+                            <li>Migrated road attribute automation from an event-stream system to a Spark-based batch processing job.</li>
+                            <li>Reduced processing time from 24+ hours to ~4 hours using Spark's MapReduce and AWS EMR clusters.</li>
+                            <li>Integrated the batch job into a DAG execution plan coordinating upstream/downstream processes.</li>
+                            <li>Delivered multiple attributes across phased releases; investigated and resolved UAT/production issues with Spark and CloudWatch logs.</li>
+                            <li>Utilized AWS S3 for input/output data storage.</li>
+                        </ul>
+                        <h4>Event Stream-Based Processing</h4>
+                        <ul>
+                            <li>Developed an event-driven streaming application with Java, Spring Boot, PostgreSQL, and Apache Kafka.</li>
+                            <li>Implemented a blocking queue mechanism and RDBMS for intermediate persistence.</li>
+                            <li>Designed workflows to handle events sequentially and publish processed data to downstream consumers.</li>
+                            <li>Deployed on Kubernetes for load balancing and scaling; built CI/CD with GitLab.</li>
+                            <li>Leveraged Splunk for log analysis and troubleshooting.</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-item">
+                        <header>
+                            <h3>Software Engineer II • Cisco India, Chennai</h3>
+                            <span class="duration">Feb 2020 – Sept 2021</span>
+                        </header>
+                        <h4>Cisco Cloud Calling</h4>
+                        <ul>
+                            <li>Designed and implemented RESTful and SOAP APIs using Spring Boot and PostgreSQL.</li>
+                            <li>Integrated REST clients with an Angular-based frontend for seamless communication.</li>
+                            <li>Developed Spring-based authentication service; automated UI tests with Selenium.</li>
+                            <li>Built CI/CD pipelines via Jenkins; upgraded Spring Boot 1.5.9 → 2.3.3.</li>
+                        </ul>
+                    </article>
+
+                    <article class="exp-item">
+                        <header>
+                            <h3>Verizon India, Chennai</h3>
+                            <span class="duration">July 2016 – Feb 2020</span>
+                        </header>
+                        <h4>Analyst System Developer (July 2019 – Feb 2020)</h4>
+                        <ul>
+                            <li>Worked on backend of a SaaS Conversation Manager tool using Java, PostgreSQL, REST services.</li>
+                        </ul>
+                        <h4>Software Engineer Developer (July 2016 – July 2019)</h4>
+                        <ul>
+                            <li>Java developer on Voice portal (IVR) using VXML (Voice XML) and Nuance grammars.</li>
+                            <li>Built AngularJS metrics dashboard for real-time call volumes.</li>
+                            <li>Created Java-based security vulnerability finder to mask CPNI-sensitive data in logs.</li>
+                            <li>Developed Verizon Store Locator web app using PHP, CSS, HTML, Google Maps API.</li>
+                        </ul>
+                    </article>
+                </section>
+
+                <section id="education" class="section">
+                    <h2>Education</h2>
+                    <article class="edu-item">
                         <h3>Cochin University of Science & Technology, Kochi</h3>
-                        <p class="degree">Bachelor of Technology, Computer Science Engineering</p>
-                        <p class="duration">2012 - 2016</p>
-                    </div>
-                    <div class="education-item">
+                        <p>Bachelor of Technology, Computer Science Engineering</p>
+                        <span class="duration">2012 – 2016</span>
+                    </article>
+                    <article class="edu-item">
                         <h3>St Michael's High School, Patna, Bihar</h3>
-                        <p class="degree">All India Senior School Certificate Examination (AISSCE) 12th, CBSE</p>
-                        <p class="duration">2009 - 2011</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                        <p>AISSCE (12th), CBSE</p>
+                        <span class="duration">2009 – 2011</span>
+                    </article>
+                </section>
 
-        <section id="contact" class="contact">
-            <div class="container">
-                <h2>Get In Touch</h2>
-                <p>I'm always open to discussing new projects and opportunities in software engineering and distributed systems.</p>
-                <div class="social-links">
-                    <a href="https://github.com/nrjsingh1" target="_blank" class="btn">GitHub Profile</a>
-                    <a href="https://linkedin.com/in/nrjsingh1" target="_blank" class="btn">LinkedIn Profile</a>
-                </div>
-            </div>
-        </section>
-    </main>
+                <!-- Duplicate Skills section removed -->
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Neeraj Singh. All rights reserved.</p>
+                <footer class="footer">
+                    <p>© 2025 Neeraj Singh</p>
+                </footer>
+            </main>
         </div>
-    </footer>
-</body>
+
+        <script>
+            // Scrollspy using IntersectionObserver
+            const sections = document.querySelectorAll('main .section');
+            const navLinks = document.querySelectorAll('.side-nav .nav-link');
+            const byId = (id) => Array.from(navLinks).find(a => a.getAttribute('href') === '#' + id);
+
+            const observer = new IntersectionObserver(
+                (entries) => {
+                    entries.forEach(entry => {
+                        const link = byId(entry.target.id);
+                        if (!link) return;
+                        if (entry.isIntersecting) {
+                            navLinks.forEach(a => a.classList.remove('active'));
+                            link.classList.add('active');
+                        }
+                    });
+                },
+                { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0.2 }
+            );
+            sections.forEach(sec => observer.observe(sec));
+
+            // Close mobile drawer on click (if implemented via CSS)
+            navLinks.forEach(a => a.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            }));
+        </script>
+    </body>
 </html>
