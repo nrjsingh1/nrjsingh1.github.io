@@ -53,6 +53,27 @@ body.dark-mode .timeline-item.in-view .timeline-dot {
   border-color: #1e293b;
 }
 
+/* Readable link styling in content (light + dark) */
+.section a,
+.timeline-content a{
+  color: var(--primary-600);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.section a:hover,
+.timeline-content a:hover{
+  color: var(--primary);
+}
+
+body.dark-mode .section a,
+body.dark-mode .timeline-content a{
+  color: var(--primary);
+}
+body.dark-mode .section a:hover,
+body.dark-mode .timeline-content a:hover{
+  color: #7dd3fc; /* sky-300 for extra contrast on hover */
+}
+
 body.dark-mode .chip-list li {
   background: #334155;
   border-color: #475569;
